@@ -7,6 +7,7 @@
 
 # 4. 기술 스택
 - Spring Boot
+    - lombok
 - React
 - AWS
     - EC2
