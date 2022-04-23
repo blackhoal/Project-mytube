@@ -4,11 +4,14 @@
 # 2. 프로젝트 기간
 
 # 3. 인원
+- 1인
 
 # 4. 기술 스택
 - Spring Boot
     - lombok
 - React
+    - Bootstrap
+    - Axios
 - AWS
     - EC2
     - RDS
