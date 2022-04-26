@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import ListBoardComponent from './components/ListBoardComponent';
+import HeaderComponent from './components/HeaderComponent';
+import FooterComponent from './components/FooterComponent';
+import CreateBoardComponent from './components/CreateBoardComponent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div> 
+      <BrowserRouter>
+        <HeaderComponent/>
+          <div className="container">
+            <Routes>
+              <Route path = "/" exact element = {<ListBoardComponent/>}></Route>
+              <Route path = "/board" element = {<ListBoardComponent/>}></Route>
+              <Route path = "/create-board" element = {<CreateBoardComponent/>}></Route>
+            </Routes>
+          </div>
+        <FooterComponent/>
+      </BrowserRouter>
     </div>
   );
 }
